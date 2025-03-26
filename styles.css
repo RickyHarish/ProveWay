@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.bundle-container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 350px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.bundle-option {
+    padding: 30px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+.bundle-option input {
+    display: none;
+}
+
+.bundle-option label {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.bundle-option .discount {
+    color: green;
+}
+
+.bundle-option.expanded {
+    border-color: #008000;
+    background: #e8f5e9;
+}
+
+.most-popular {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    color: green;
+    margin: 12px;
+    font-size: 10px;
+    border-radius: 3px;
+    padding-right: 10px;
+}
+
+.dropdowns {
+    display: none;
+    margin-top: 10px;
+}
+
+.bundle-option.expanded .dropdowns {
+    display: block;
+}
+
+.dropdown {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.shipping-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.total {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.add-to-cart {
+    width: 100%;
+    background: green;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
