@@ -13,77 +13,209 @@ body {
     border-radius: 10px;
     width: 350px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
+/* Update the title styling */
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Align to the right */
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.title-line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: #e0e0e0; /* Light grey color */
+    margin-right: 15px;
+}
+
+.title {
+    color: #ff4081;
+    font-size: 18px;
+    font-weight: bold;
+    white-space: nowrap; /* Prevent wrapping */
+    text-align: right;
+    margin: 0; /* Remove default margins */
+}
+
+
+/* Change this CSS rule */
+.bundle-option input {
+    margin-right: 10px; /* Add this to give some spacing */
+}
+
+/* Update the label styling to accommodate visible radio buttons */
+.bundle-option label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+    width: 100%; /* Ensure label takes full width */
+}
+
+/* Add this to create a better layout for the bundle option */
 .bundle-option {
-    padding: 30px;
+    padding: 20px;
     border: 2px solid #ccc;
     border-radius: 5px;
     margin-bottom: 10px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     position: relative;
+    display: flex; /* Add this */
+    flex-direction: column; /* Add this */
+    align-items: flex-start; /* Add this */
 }
 
-.bundle-option input {
+/* Add these new styles */
+.bundle-header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.bundle-header input[type="radio"] {
+    margin-right: 10px;
+}
+
+.bundle-info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.bundle-left {
+    display: flex;
+    align-items: center;
+}
+
+.bundle-title {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.bundle-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.standard-price {
+    font-size: 12px;
+    color: rgb(235, 136, 30);
+    margin-left: 25px; /* Align with the bundle-left content */
+    margin-bottom: 10px;
+    align-self: flex-start;
+}
+
+
+/* Add this to style the radio button container */
+.radio-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}.bundle-option input {
     display: none;
 }
 
 .bundle-option label {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
     font-weight: bold;
 }
 
-.bundle-option .discount {
-    color: green;
+.discount-tag {
+    color: #d32f2f;
+    font-size: 12px;
+    background: #ffebee;
+    padding: 2px 5px;
+    border-radius: 3px;
 }
 
-.bundle-option.expanded {
-    border-color: #008000;
-    background: #e8f5e9;
+.price {
+    font-size: 16px;
+    font-weight: bold;
 }
+
+.original-price {
+    text-decoration: line-through;
+    font-size: 12px;
+    color: gray;
+}
+
+
 
 .most-popular {
     position: absolute;
-    right: 10px;
     top: 5px;
-    color: green;
-    margin: 12px;
+    right: 10px;
+    background: #ff4081;
+    color: white;
     font-size: 10px;
+    padding: 3px 6px;
     border-radius: 3px;
-    padding-right: 10px;
 }
 
+/* Add this to your existing CSS */
 .dropdowns {
     display: none;
-    margin-top: 10px;
+    width: 90%; /* Increase width */
+    margin: 15px auto 5px; /* Center in the bundle-option with margin */
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
 }
 
 .bundle-option.expanded .dropdowns {
     display: block;
 }
 
+
 .dropdown {
     display: flex;
     justify-content: space-between;
     margin-bottom: 5px;
+    margin-bottom: 12px; /* Increase spacing between dropdown rows */
+    padding: 5px 0;
 }
 
-.shipping-box{
+.dropdown label {
+    font-weight: bold;
+    min-width: 30px;
+}
+
+.dropdown select {
+    margin-left: 10px;
+    padding: 6px 10px; /* Increase padding for larger select boxes */
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    background-color: white;
+    flex: 1;
+    max-width: 120px; /* Set maximum width */
+}
+
+.shipping-box {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
-
-.total {
     font-weight: bold;
     margin-top: 10px;
 }
 
+.shipping{
+    color: #d32f2f;
+}
+
 .add-to-cart {
     width: 100%;
-    background: green;
+    background: #ff4081;
     color: white;
     padding: 10px;
     border: none;

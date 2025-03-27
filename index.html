@@ -3,67 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bundle & Save</title>
+    <title>YAY! It's BOGO</title>
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
 </head>
 <body>
     <div class="bundle-container">
-        <h2>Bundle & Save</h2>
+        <div class="title-container">
+            <div class="title-line"></div>
+            <h2 class="title">YAY! It's BOGO</h2>
+            <div class="title-line"></div>
+        </div>
         <div class="bundle-options">
-            <!-- 1 Pair Option -->
+            <!-- 1 Unit Option -->
             <div class="bundle-option" onclick="selectBundle(this, 1)">
-                <input type="radio" name="bundle" id="bundle1">
-                <label for="bundle1">1 Pair <span class="price">DKK 195.00</span> <span class="discount">50% OFF</span></label>
-                <div class="dropdowns">
-                    <div class="dropdown">
-                        <label>#1</label>
-                        <select>
-                            <option>S</option>
-                            <option>M</option>
-                            <option>L</option>
-                            <option>XL</option>
-                        </select>
-                        <select><option>Colour</option></select>
-                    </div>
-                    <div class="dropdown">
-                        <label>#2</label>
-                        <select>
-                            <option>S</option> 
-                            <option>M</option>
-                            <option>L</option>
-                            <option>XL</option>
-                        </select>
-                        <select><option>Colour</option></select>
-                    </div>
-                    <div class="dropdown">
-                        <label>#3</label>
-                        <select>
-                            <option>S</option>
-                            <option>M</option>
-                            <option>L</option>
-                            <option>XL</option>
-                        </select>
-                        <select><option>Colour</option></select>
+                <div class="bundle-header">
+                    <input type="radio" name="bundle" id="bundle1">
+                    <div class="bundle-info">
+                        <div class="bundle-left">
+                            <span class="bundle-title">1 Unit</span>
+                            <span class="discount-tag">10% Off</span>
+                        </div>
+                        <div class="bundle-right">
+                            <span class="price">$10.00 USD</span>
+                            <span class="original-price">$24.00 USD</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- 2 Pair Option -->
-            <div class="bundle-option" onclick="selectBundle(this, 2)">
-                <input type="radio" name="bundle" id="bundle2">
-                <label for="bundle2">2 Pair <span class="price">DKK 345.00</span> <span class="discount">40% OFF</span></label>
-                <span class="most-popular">Most Popular</span>
+                <span class="standard-price">Standard Price</span>
                 <div class="dropdowns">
                     <div class="dropdown">
                         <label>#1</label>
-                        <select>
-                            <option>S</option>
-                            <option>M</option>
-                            <option>L</option>
-                            <option>XL</option>
-                        </select>
-                        <select><option>Colour</option></select>
+                        <div class="select-group">
+                            <span class="select-label">Size:</span>
+                            <select class="size-select">
+                                <option>S</option>
+                                <option>M</option>
+                                <option>L</option>
+                                <option>XL</option>
+                            </select>
+                        </div>
+                        <div class="select-group">
+                            <span class="select-label">Color:</span>
+                            <select class="color-select">
+                                <option>Black</option>
+                            <option>Blue</option>
+                            <option>Red</option>
+                            <option>Green</option>
+                            </select>
+                        </div>
                     </div>
                     <div class="dropdown">
                         <label>#2</label>
@@ -73,35 +61,108 @@
                             <option>L</option>
                             <option>XL</option>
                         </select>
-                        <select><option>Colour</option></select>
+                        <select>
+                            <option>Black</option>
+                            <option>Blue</option>
+                            <option>Red</option>
+                            <option>Green</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 2 Unit Option -->
+            <div class="bundle-option popular" onclick="selectBundle(this, 2)">
+                <div class="bundle-header">
+                    <input type="radio" name="bundle" id="bundle2">
+                    <div class="bundle-info">
+                        <div class="bundle-left">
+                            <span class="bundle-title">2 Unit</span>
+                            <span class="discount-tag">20% Off</span>
+                        </div>
+                        <div class="bundle-right">
+                            <span class="price">$18.00 USD</span>
+                            <span class="original-price">$24.00 USD</span>
+                        </div>
+                    </div>
+                </div>
+                <span class="most-popular">MOST POPULAR</span>
+                <div class="dropdowns">
+                    <div class="dropdown">
+                        <label>#1</label>
+                        <div class="select-group">
+                            <span class="select-label">Size:</span>
+                            <select class="size-select">
+                                <option>S</option>
+                                <option>M</option>
+                                <option>L</option>
+                                <option>XL</option>
+                            </select>
+                        </div>
+                        <div class="select-group">
+                            <span class="select-label">Color:</span>
+                            <select class="color-select">
+                                <option>Black</option>
+                            <option>Blue</option>
+                            <option>Red</option>
+                            <option>Green</option>
+                            </select>
+                        </div>
                     </div>
                     <div class="dropdown">
-                        <label>#3</label>
+                        <label>#2</label>
                         <select>
                             <option>S</option>
                             <option>M</option>
                             <option>L</option>
                             <option>XL</option>
                         </select>
-                        <select><option>Colour</option></select>
+                        <select>
+                            <option>Black</option>
+                            <option>Blue</option>
+                            <option>Red</option>
+                            <option>Green</option>
+                        </select>
                     </div>
                 </div>
             </div>
-
-            <!-- 3 Pair Option -->
+            
+            <!-- 3 Unit Option -->
             <div class="bundle-option" onclick="selectBundle(this, 3)">
-                <input type="radio" name="bundle" id="bundle3">
-                <label for="bundle3">3 Pair <span class="price">DKK 528.00</span> <span class="discount">60% OFF</span></label>
+                <div class="bundle-header">
+                    <input type="radio" name="bundle" id="bundle3">
+                    <div class="bundle-info">
+                        <div class="bundle-left">
+                            <span class="bundle-title">3 Unit</span>
+                            <span class="discount-tag">30% Off</span>
+                        </div>
+                        <div class="bundle-right">
+                            <span class="price">$24.00 USD</span>
+                            <span class="original-price">$24.00 USD</span>
+                        </div>
+                    </div>
+                </div>
                 <div class="dropdowns">
                     <div class="dropdown">
                         <label>#1</label>
-                        <select>
-                            <option>S</option>
-                            <option>M</option>
-                            <option>L</option>
-                            <option>XL</option>
-                        </select>
-                        <select><option>Colour</option></select>
+                        <div class="select-group">
+                            <span class="select-label">Size:</span>
+                            <select class="size-select">
+                                <option>S</option>
+                                <option>M</option>
+                                <option>L</option>
+                                <option>XL</option>
+                            </select>
+                        </div>
+                        <div class="select-group">
+                            <span class="select-label">Color:</span>
+                            <select class="color-select">
+                                <option>Black</option>
+                            <option>Blue</option>
+                            <option>Red</option>
+                            <option>Green</option>
+                            </select>
+                        </div>
                     </div>
                     <div class="dropdown">
                         <label>#2</label>
@@ -111,7 +172,12 @@
                             <option>L</option>
                             <option>XL</option>
                         </select>
-                        <select><option>Colour</option></select>
+                        <select>
+                            <option>Black</option>
+                            <option>Blue</option>
+                            <option>Red</option>
+                            <option>Green</option>
+                        </select>
                     </div>
                     <div class="dropdown">
                         <label>#3</label>
@@ -121,15 +187,20 @@
                             <option>L</option>
                             <option>XL</option>
                         </select>
-                        <select><option>Colour</option></select>
+                        <select>
+                            <option>Black</option>
+                            <option>Blue</option>
+                            <option>Red</option>
+                            <option>Green</option>
+                        </select>
                     </div>
                 </div>
             </div>
         </div>
-    <div class="shipping-box">
-        <p class="shipping">Free 2 Day Shipping</p>
-        <p class="total">Total: <span id="total-price">DKK 360.00</span></p>
-    </div>
+        <div class="shipping-box">
+            <p class="shipping">Free Delivery</p>
+            <p class="total">Total: <span id="total-price">$18.00 USD</span></p>
+        </div>
         <button class="add-to-cart">+ Add to Cart</button>
     </div>
 </body>
